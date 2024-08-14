@@ -1,0 +1,7 @@
+@for (skill of professionalSkills; track skill) {
+<div class="prof-skill-card">
+  <img [src]="skill.image" alt="Card Image">
+  <h3>{{ skill.title }}</h3>
+  <p>{{ skill.description }}</p>
+</div>
+}

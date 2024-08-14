@@ -1,0 +1,33 @@
+@for (education of educationObject; track $index) {
+<div class="education-content">
+  <div class="education-inner">
+    <div class="education-visible">
+      <!-- Date -->
+      <div>
+        <h3>{{ education.date }}</h3>
+        <p style="text-wrap: nowrap">{{ education.duration }}</p>
+      </div>
+
+      <!-- Location -->
+      <div>
+        <h2>{{ education.location }}</h2>
+      </div>
+
+      <!-- Degree -->
+      <div>
+        <h2>{{ education.degree }}</h2>
+      </div>
+    </div>
+    <div class="education-hidden">
+      @if (education.information) {
+      <small>Courses</small>
+      <div class="education-courses">
+        @for (information of education.information; track $index) {
+        <p>-{{ information }}</p>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</div>
+}

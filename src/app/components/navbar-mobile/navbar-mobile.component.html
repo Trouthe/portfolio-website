@@ -1,0 +1,66 @@
+<section class="navigation-m">
+  <!-- Left -->
+  <div>
+    <h2>Anthony<br />Hajjar</h2>
+  </div>
+
+  <!-- Menu content -->
+  @if (isOpen) {
+  <div class="menu">
+    <h2>Anthony<br />Hajjar</h2>
+
+    <div>
+      <a (click)="onClickScroll('education')">Education</a>
+      <a (click)="onClickScroll('work')">Work-Experience</a>
+      <a (click)="onClickScroll('portfolio')">Portfolio</a>
+      <a (click)="onClickScroll('contact')">Contact</a>
+    </div>
+
+    <div>
+      <!-- Theme switches -->
+      <!-- <button (click)="switchTheme()">Switch</button> -->
+    </div>
+  </div>
+  }
+
+  <!-- Hamburger Menu -->
+  <div class="hamburger">
+    <div class="power-switch" (click)="switchTheme()">
+      <input type="checkbox" />
+      <div class="button">
+        <svg class="power-off">
+          <use xlink:href="#line" class="line" />
+          <use xlink:href="#circle" class="circle" />
+        </svg>
+        <svg class="power-on">
+          <use xlink:href="#line" class="line" />
+          <use xlink:href="#circle" class="circle" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- SVG -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 150 150"
+        id="line"
+      >
+        <line x1="75" y1="34" x2="75" y2="58" />
+      </symbol>
+      <symbol
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 150 150"
+        id="circle"
+      >
+        <circle cx="75" cy="80" r="35" />
+      </symbol>
+    </svg>
+    <img
+      width="45px"
+      [src]="hamburgerMenuSrc"
+      (click)="toggleMenu()"
+      alt="Menu Icon"
+    />
+  </div>
+</section>

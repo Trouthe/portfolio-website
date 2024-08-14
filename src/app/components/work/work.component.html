@@ -1,0 +1,33 @@
+@for (work of workObject; track $index) {
+<div class="work-content">
+  <div class="work-inner">
+    <div class="work-visible">
+      <!-- Date -->
+      <div>
+        <h3>{{ work.date }}</h3>
+        <p style="text-wrap: nowrap">{{ work.duration }}</p>
+      </div>
+
+      <!-- Location -->
+      <div>
+        <h2>{{ work.location }}</h2>
+      </div>
+
+      <!-- Degree -->
+      <div>
+        <h2>{{ work.position }}</h2>
+      </div>
+    </div>
+    <div class="work-hidden">
+      @if (work.information) {
+      <small>Achievements / Tasks</small>
+      <div class="work-tasks">
+        @for (information of work.information; track $index) {
+        <p>-{{ information }}</p>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</div>
+}

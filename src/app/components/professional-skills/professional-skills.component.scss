@@ -1,0 +1,56 @@
+.prof-skill-card {
+  width: 425px;
+
+  padding: 1.75rem;
+  border: 1px solid var(--stroke-color);
+  border-radius: 20px;
+
+  img {
+    width: 60px;
+  }
+
+  h3 {
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+  }
+
+  h1,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3) {
+    margin-left: -3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .prof-skill-card {
+    width: 325px;
+    padding: 1rem;
+
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-left: 0rem;
+    }
+
+    img {
+      width: 48px;
+    }
+
+    h3 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 13px;
+      //   text-align: justify;
+      font-weight: lighter;
+    }
+  }
+}

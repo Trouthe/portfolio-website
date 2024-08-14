@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./assets/styles/themes.scss";
+@import "./assets/styles/responsiveness.scss";
+
+@font-face {
+  font-family: Fira Code;
+  src: url("assets/fonts/FiraCode-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Open Sans;
+  src: url("assets/fonts/OpenSans-VariableFont_wdthwght.ttf");
+}
+
+::selection {
+  background-color: rgba(233, 233, 0, 0.623);
+  color: white;
+}
+
+html,
+body {
+  background-color: var(--main-background);
+  color: var(--text-primary);
+  margin: 0;
+  scroll-behavior: smooth !important;
+
+  font-family: "Fira Code";
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+small {
+  color: var(--text-secondary);
+}

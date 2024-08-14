@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2019-2024",
+    "duration": "5 Years",
+    "location": "Lebanese International University - LIU",
+    "degree": "BS Computer Science",
+    "information": [
+      "Data Structures & Algorithms",
+      "Object Oriented Programming",
+      "IMS Database Management",
+      "Advanced Web Development",
+      "Robotics"
+    ]
+  },
+  {
+    "date": "2016-2019",
+    "duration": "3 Years",
+    "location": "Techincal & Language College - TLC",
+    "degree": "BT Information IT",
+    "information": [
+      "Computer Hardware Troubleshooting",
+      "Computer Assembly",
+      "Basic Level Networking",
+      "Algorithms",
+      "Java & C++", 
+      "Business Law"
+    ]
+  },
+  {
+    "date": "2013-2016",
+    "duration": "3 Years",
+    "location": "High School & Technical College - Mesrobian",
+    "degree": "BP Accounting",
+    "information": [
+      "Accounting Concept",
+      "Basics of Accounting",
+      "Bank Statements",
+      "Financial management",
+      "Balance Sheets"
+    ]
+  }
+]

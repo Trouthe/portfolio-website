@@ -1,0 +1,33 @@
+// Breakpoints
+// $bp-sm: 640px;
+// $bp-lg: 1024px;
+
+// // Small
+// @media (max-width: $bp-sm) {
+//   .header {
+//     gap: 1rem !important;
+
+//     h1 {
+//       font-size: 50px !important;
+//     }
+//   }
+//   .header-item {
+//     flex: 1 1 100% !important;
+//   }
+//   .header-item.item-a {
+//     order: 1 !important;
+//   }
+//   .header-item.item-d {
+//     order: 2 !important;
+//   }
+//   .header-item.item-c {
+//     order: 3 !important;
+//   }
+//   .header-item.item-b {
+//     order: 4 !important;
+//   }
+// }
+
+// // Large
+// @media (max-width: $bp-lg) {
+// }

@@ -1,0 +1,33 @@
+[
+  {
+    "date": "2024",
+    "duration": "Present",
+    "location": "Freelancing",
+    "position": "Full-Stack Dev",
+    "information": [
+      "Designed and developed responsive websites for diverse clients, ensuring optimal performance across devices. Successfully implemented custom features and functionalities tailored to client needs, leading to increased user engagement. Managed end-to-end project lifecycles, from initial concept through to deployment, while consistently meeting deadlines and exceeding client expectations."
+    ]
+  },
+  {
+    "date": "2024",
+    "duration": "3 Months",
+    "location": "Life Sculptor - Remote",
+    "position": "Front-End Dev",
+    "information": [
+      "In this volunteering job, I stepped out of my comfort zone and dabbled in some React. Everyone had a task at hand, mine mainly was several parts of the Front-End. It was a pleasant experience working with the team!"
+    ]
+  },
+  {
+    "date": "2023",
+    "duration": "6 Months",
+    "location": "Fahed Supervalue - Zalka",
+    "position": "IT Manager",
+    "information": [
+      "Take care of the system DataBase.",
+      "Ensure safety and provide maintenance for hardware across the company.",
+      "Making daily necessary commits through Oracle and other management programs.",
+      "Making sure that the fingerprint system for employees has no clocking in/out issues that will affect any of the worker’s paycheck.",
+      "Communication skill from talking with other companies personnel."
+    ]
+  }
+]

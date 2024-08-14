@@ -1,0 +1,146 @@
+.education-content {
+  border-top: 1px solid var(--stroke-color);
+  &:last-child {
+    border-bottom: 1px solid var(--stroke-color);
+  }
+
+  .education-inner {
+    max-width: 1920px;
+    margin-inline: auto;
+  }
+
+  padding-inline: 3rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  height: 46px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 350ms;
+
+  &:hover {
+    height: calc(157px);
+  }
+
+  .education-hidden {
+    padding-top: 2rem;
+    padding-inline: 5rem;
+
+    .education-courses {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, auto);
+      align-items: center;
+
+      p {
+        color: var(--text-primary);
+      }
+
+      &::before {
+        content: "";
+        background-image: url("/assets/Untitled-5.png");
+        background-size: 15px 70px;
+        transform: rotate(180deg);
+        background-repeat: no-repeat;
+        position: absolute;
+        filter: var(--filter);
+        width: 20px;
+        height: 70px;
+        left: -5.25rem;
+        bottom: -0.2rem;
+      }
+
+      &::after {
+        content: "";
+        background-image: url("/assets/Untitled-5.png");
+        background-size: 15px 70px;
+        // transform: rotate(180deg);
+        background-repeat: no-repeat;
+        position: absolute;
+        filter: var(--filter);
+        width: 20px;
+        height: 70px;
+        right: -5.25rem;
+        bottom: -0.2rem;
+      }
+    }
+  }
+
+  .education-visible {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h2,
+  h3,
+  p {
+    font-weight: normal;
+    margin: 0;
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+
+  h3 {
+    font-family: "Open Sans";
+  }
+}
+
+// Responsiveness
+@media (max-width: 800px) {
+  .education-content {
+    padding-inline: .75rem;
+
+    h2,
+    h3 {
+      font-size: 13px;
+    }
+
+    p {
+      font-size: 10px;
+    }
+
+    .education-inner {
+      &:focus {
+        height: calc(200px);
+      }
+      .education-visible {
+        text-align: center;
+
+        p {
+          color: var(--text-secondary);
+        }
+
+        div:nth-child(2) {
+          padding-inline: 1.5rem;
+        }
+      }
+    }
+
+    .education-hidden {
+      padding-top: 1.5rem;
+      padding-inline: 2.5rem;
+      .education-courses {
+        gap: 0.25rem;
+
+        &::before {
+          background-size: 15px 70px;
+          width: 20px;
+          height: 70px;
+          left: -2.5rem;
+          bottom: -0rem;
+        }
+        &::after {
+          background-size: 15px 70px;
+          width: 20px;
+          height: 70px;
+          right: -2.5rem;
+          bottom: -0rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+[
+  {
+    "image": "image-1.png",
+    "title": "Taskify",
+    "description": [
+      "Taskify is a webapp I made as a little project, it helps manage projects and improve productivity. It is optimized for both, Web and Mobile with a very user-friendly and responsive design!",
+      "For this project, I used MongoDB for the database, Node & Express for the back-end and Angular for the front-end.",
+      "Bcrypt was utilized to encrypt user passwords in the database for ultimate security, and jwt for establishing user session and maintaining it.",
+      "Socket.io was vital for making sessions and dynamically project changes onto the page without the need to refresh."
+    ],
+    "technology": [
+      "Angular",
+      "Socket.io",
+      "Node",
+      "Express",
+      "MongoDB",
+      "Bcrypt",
+      "SCSS"
+    ],
+    "link": "https://fullstackprojectspice.netlify.app/"
+  },
+  {
+    "image": "image-2.png",
+    "title": "Fiber",
+    "description": [
+      "Fiber is a mockup website made for a fitness application made with angular and mainly used TailwindCSS for the design",
+      "For this project, there was a strict Figma file for the design, and I replicated it pixel perfectly, specially the phone load in animation! It consists of several <img /> tags with defined transform values with an onInit animation keyframes to give it that specialized load in look!"
+    ],
+    "technology": ["Angular", "Figma", "TailwindCSS", "PostCSS", "SCSS"],
+    "link": "https://p01-fiber.netlify.app/"
+  },
+  {
+    "image": "image-3.png",
+    "title": "Scales",
+    "description": [
+      "Scales is a mockup website made for an e-commerce accelerator website made with angular and TailwindCSS for the most part of the design.",
+      "For this project, there was a strict Figma file for the design, recreating it with the exact shadows and details was no challenge. For the members section, the user backgrounds were made with pure css giving full freedom for any design change, animations and giving the page that one extra performance boost!",
+      "Small details have been added here and there, such as the customers continuous slider and the shadows for a footer!"
+    ],
+    "technology": ["Angular", "Figma", "TailwindCSS", "PostCSS", "SCSS"],
+    "link": "https://p04.netlify.app/"
+  },
+  {
+    "image": "image-4.png",
+    "title": "Phone Mockup",
+    "description": [
+      "This is a Phone mockup website where it showcases any device, in this case, a phone, and highlights the best parts of it.",
+      "Working on this personal project was so challenging, I had to learn a new animation library (GSAP) and make it work with TypeScript, and setting up a canvas for the 3D model with spline runtime tool and implementing a loading animation for the duration of your browser loading the model for the best user experience.",
+      "The model was made in spline, and I added a few changes in Blender before re-importing it to spline and adding keyframes to change colors, which are triggered through GSAP."
+    ],
+    "technology": [
+      "Angular",
+      "GSAP",
+      "Spline",
+      "Splinetool",
+      "Blender",
+      "SCSS"
+    ],
+    "link": "https://p063d.netlify.app/"
+  },
+  {
+    "image": "image-5.png",
+    "title": "/ No Title /",
+    "description": [
+      "In this website, I tried copying a design of another website without any Figma file or preparation, pure intuition and adaptive approach.",
+      "I enjoyed making the Hexagone designs with clip-path and implemented custom SVGs made from scratch with pure code and animated with @keyframes {} and pseudo-classes to target specific elements without the need to overload the website with classes.",
+      "The navbar was special here, it was made to change to a white background if the user scrolled farther than 250 pixels and revert back when within that range."
+    ],
+    "technology": ["Angular", "SVG", "CSS"],
+    "link": "https://p-03.netlify.app/"
+  }
+]

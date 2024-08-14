@@ -1,0 +1,57 @@
+[data-theme="light"] {
+  --main-background: #ffffff;
+
+  --text-primary: #121212;
+  --text-secondary: #777777;
+  --text-contrast: #f5f5f5;
+  --text-gradient: linear-gradient(
+    90deg,
+    #4e4e4e 0%,
+    #121212 50.05%,
+    #4e4e4e 100%
+  );
+
+  --content-background-light: #121212;
+  --content-background-dark: #f5f5f5;
+
+  --stroke-color: #121212;
+  --content-border-radius: 35px;
+  --filter: invert(0%) sepia(18%) saturate(867%) hue-rotate(337deg) brightness(89%) contrast(86%);
+
+  --hamburger-menu: "/assets/svg/burger-menu-black.svg";
+  --arrow-icon: "/assets/svg/arrow-white.svg";
+
+  --figma-icon: "/assets/svg/figma-logo-black.png";
+  --github-icon: "/assets/svg/github-black.png";
+  --linkedin-icon: "/assets/svg/linkedin-black.png";
+  --mail-icon: "/assets/svg/mail-black.png";
+}
+
+[data-theme="dark"] {
+  --main-background: #231f20;
+
+  --text-primary: #ffffff;
+  --text-secondary: #929292;
+  --text-contrast: #121212;
+  --text-gradient: linear-gradient(
+    90deg,
+    #747474 0%,
+    #c7c7c7 50.05%,
+    #747474 100%
+  );
+
+  --content-background-light: #f5f5f5;
+  --content-background-dark: #121212;
+
+  --stroke-color: #505050;
+  --content-border-radius: 35px;
+  --filter: invert(1);
+
+  --hamburger-menu: "/assets/svg/burger-menu-white.svg";
+  --arrow-icon: "/assets/svg/arrow-black.svg";
+
+  --figma-icon: "/assets/svg/figma-logo-white.png";
+  --github-icon: "/assets/svg/github-white.png";
+  --linkedin-icon: "/assets/svg/linkedin-white.png";
+  --mail-icon: "/assets/svg/mail-white.png";
+}

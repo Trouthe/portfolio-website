@@ -1,0 +1,26 @@
+@for (portfolio of portfolioContent; track $index) {
+<!-- Main Container -->
+<div class="portfolio-container">
+  <div class="portfolio-image">
+    <div class="arrow" (click)="goto(portfolio.link)">Visit Page &#x2192;</div>
+    <img
+      src="/assets/portfolio-images/{{ portfolio.image }}"
+      alt="Project Image"
+    />
+  </div>
+  <div class="portfolio-title">
+    <h1>{{ portfolio.title }}</h1>
+    <div>
+      @for (tech of portfolio.technology; track $index) {
+      <span>{{ tech }}</span>
+      }
+    </div>
+  </div>
+  <div class="portfolio-description">
+    @for (info of portfolio.description; track $index) {
+    <p>{{ info }}</p>
+    }
+  </div>
+</div>
+
+}
