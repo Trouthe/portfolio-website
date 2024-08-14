@@ -15,7 +15,7 @@
 <!-- Header -->
 <section id="header" class="header">
   <h1 class="header-item item-a">Fullstack</h1>
-  <div class="header-item item-b" (click)="test()">
+  <div class="header-item item-b" (click)="onClickScroll('portfolio')">
     <button class="header-button">Projects</button>
     <button><img [src]="arrowIcon" alt="" /></button>
   </div>
@@ -152,14 +152,18 @@
 
     <div class="contact-explore">
       <h3>Explore this website in depth!</h3>
-      <div class="button-item">
-        <img width="25px" height="25px" [src]="figmaIcon" alt="" />
-        <a href="">Figma File</a>
-      </div>
-      <div class="button-item">
-        <img width="25px" height="25px" [src]="githubIcon" alt="" />
-        <a href="">GitHub Repo</a>
-      </div>
+      <a href="https://www.figma.com/design/f3VfxhyK12zJR9DvfZBgcw/Untitled?node-id=0-1&t=h8KeLoN4d9K58UT1-1" target="_blank">
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="figmaIcon" alt="" />
+          <a>Figma File</a>
+        </div>
+      </a>
+      <a href="https://github.com/Trouthe/portfolio-website" target="_blank">
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="githubIcon" alt="" />
+          <a>GitHub Repo</a>
+        </div>
+      </a>
     </div>
 
     <div class="contact-item-contrast">
@@ -170,18 +174,24 @@
     </div>
 
     <div class="contact-buttons">
-      <div class="button-item">
-        <img width="25px" height="25px" [src]="githubIcon" alt="" />
-        <a href="https://github.com/Trouthe/">GitHub</a>
-      </div>
-      <div class="button-item">
-        <img width="25px" height="25px" [src]="linkedinIcon" alt="" />
-        <a href="linkedin.com/in/anthony-hajjar/">LinkedIn</a>
-      </div>
-      <div class="button-item">
-        <img width="25px" height="25px" [src]="mailIcon" alt="" />
-        <a href="mailto:anthony.hajjar00@gmail.com">E-Mail</a>
-      </div>
+      <a href="https://github.com/Trouthe/" target="_blank">
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="githubIcon" alt="" />
+          <a>GitHub</a>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/anthony-hajjar/" target="_blank">
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="linkedinIcon" alt="" />
+          <a>LinkedIn</a>
+        </div>
+      </a>
+      <a href="mailto:anthony.hajjar00@gmail.com">
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="mailIcon" alt="" />
+          <a>E-Mail</a>
+        </div>
+      </a>
     </div>
   </footer>
 </section>

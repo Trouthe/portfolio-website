@@ -9,6 +9,7 @@ import { EducationComponent } from './components/education/education.component';
 import { ProfessionalSkillsComponent } from './components/professional-skills/professional-skills.component';
 import { WorkComponent } from './components/work/work.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -34,9 +35,12 @@ export class AppComponent implements OnInit {
   figmaIcon!: string;
   githubIcon!: string;
   linkedinIcon!: string;
-  mailIcon!: string;  
+  mailIcon!: string;
 
-  constructor(private theme: ThemeService) {}
+  constructor(
+    private theme: ThemeService,
+    private viewportScroller: ViewportScroller
+  ) {}
 
   // Detect window resize in realtime
   @HostListener('window:resize', ['$event'])
@@ -56,5 +60,7 @@ export class AppComponent implements OnInit {
     this.isMobile = window.innerWidth <= 800;
   }
 
-  test(): void {}
+  onClickScroll(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
+  }
 }
