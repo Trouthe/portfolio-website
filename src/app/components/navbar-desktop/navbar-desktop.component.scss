@@ -21,6 +21,10 @@
   }
 }
 
+.switch-button {
+  width: 100px;
+}
+
 .power-switch {
   --color-invert: #ffffff;
   --width: 150px;
@@ -132,6 +136,13 @@
         }
       }
     }
+  }
+}
+
+// laptop
+@media (max-width: 1440px) {
+  .navigation-d {
+    margin-inline: 2rem;
   }
 }
 

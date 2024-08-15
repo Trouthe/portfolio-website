@@ -89,10 +89,48 @@
   }
 }
 
-// Responsiveness
-@media (max-width: 800px) {
+@media (max-width: 1024px) {
   .education-content {
-    padding-inline: .75rem;
+    h2,
+    h3 {
+      font-size: 15px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+
+    .education-inner {
+      .education-visible {
+        padding-top: 0.5rem;
+      }
+      .education-hidden {
+        padding-top: 2.5rem;
+      }
+      .education-courses {
+        &::before {
+          background-size: 15px 70px;
+          width: 20px;
+          height: 70px;
+          left: -5rem;
+          bottom: -0.55rem;
+        }
+        &::after {
+          background-size: 15px 70px;
+          width: 20px;
+          height: 70px;
+          right: -5rem;
+          bottom: -0.55rem;
+        }
+      }
+    }
+  }
+}
+
+// Responsiveness
+@media (max-width: 820px) {
+  .education-content {
+    padding-inline: 0.75rem;
 
     h2,
     h3 {
@@ -109,6 +147,7 @@
       }
       .education-visible {
         text-align: center;
+        padding-top: 0;
 
         p {
           color: var(--text-secondary);

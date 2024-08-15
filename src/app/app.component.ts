@@ -57,7 +57,7 @@ export class AppComponent implements OnInit {
   }
 
   checkWindow(): void {
-    this.isMobile = window.innerWidth <= 800;
+    this.isMobile = window.innerWidth <= 1023;
   }
 
   onClickScroll(elementId: string): void {
