@@ -26,7 +26,7 @@
 }
 
 .power-switch {
-  --color-invert: #ffffff;
+  --color-invert: var(--text-primary);
   --width: 150px;
   --height: 150px;
   transform: scale(0.4);
@@ -53,7 +53,7 @@
         var(--color-invert),
         transparent
       );
-      filter: blur(20px);
+      filter: blur(25px);
       opacity: 0;
       transition: opacity 1s ease, transform 1s ease;
       transform: perspective(1px) translateZ(0);
@@ -109,7 +109,7 @@
           transition: opacity 0.5s ease, transform 0.5s ease;
         }
         .power-on {
-          stroke: #121212;
+          stroke: var(--color-invert);
         }
         .power-on,
         .power-off {

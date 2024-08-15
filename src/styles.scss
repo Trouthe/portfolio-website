@@ -19,11 +19,29 @@
 html,
 body {
   background-color: var(--main-background);
+  transition: background-color 250ms;
   color: var(--text-primary);
   margin: 0;
   scroll-behavior: smooth !important;
 
   font-family: "Fira Code";
+}
+
+* {
+  transition: color 30ms;
+}
+
+img,
+button,
+small,
+span,
+a,
+p,
+h1,
+h2,
+h3,
+h4 {
+  user-select: none;
 }
 
 a {

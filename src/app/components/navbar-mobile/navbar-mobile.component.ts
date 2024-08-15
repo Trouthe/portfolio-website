@@ -49,5 +49,6 @@ export class NavbarMobileComponent implements OnInit {
 
   onClickScroll(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
+    this.toggleMenu();
   }
 }

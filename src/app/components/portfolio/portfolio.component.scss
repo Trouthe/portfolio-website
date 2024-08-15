@@ -56,6 +56,7 @@
     grid-area: Title;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
 
@@ -65,6 +66,8 @@
 
     div {
       display: flex;
+      flex-wrap: wrap;
+
       gap: 0.5rem;
     }
 
@@ -87,9 +90,11 @@
   .portfolio-description {
     grid-area: Description;
 
-    color: transparent;
+    color: var(--text-primary);
     background: var(--text-gradient);
+    -webkit-background-clip: text;
     background-clip: text;
+    color: transparent;
 
     padding-left: 5rem;
     margin-top: auto;
@@ -203,6 +208,10 @@
       span {
         flex-grow: 1;
         text-align: center;
+        font-size: 11px;
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+        padding-inline: 1.5rem;
       }
     }
 

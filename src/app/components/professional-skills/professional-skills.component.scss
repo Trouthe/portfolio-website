@@ -30,6 +30,12 @@
 // Big Laptops
 @media (max-width: 1440px) {
   .prof-skill-card {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      margin-left: 0rem;
+    }
+
     width: 325px;
   }
 }
@@ -37,7 +43,6 @@
 // Small laptops
 @media (max-width: 1024px) {
   .prof-skill-card {
-    
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {

@@ -42,9 +42,11 @@
 
   p {
     font-size: 24px;
-    color: transparent;
+    color: var(--text-primary);
     background: var(--text-gradient);
+    -webkit-background-clip: text;
     background-clip: text;
+    color: transparent;
 
     span {
       color: var(--text-primary);
@@ -180,9 +182,11 @@
 
     p {
       font-size: 24px;
-      color: transparent;
+      color: var(--text-primary);
       background: var(--text-gradient);
+      -webkit-background-clip: text;
       background-clip: text;
+      color: transparent;
     }
   }
 }
@@ -384,10 +388,6 @@
         padding-top: 6px;
       }
 
-      h3 {
-        margin-top: 0;
-      }
-
       width: 25%;
       border: 1px solid var(--stroke-color);
       border-radius: var(--content-border-radius);
@@ -470,7 +470,6 @@
       flex-direction: column-reverse;
       .about-me {
         width: 100%;
-        // font-size: 20px;
       }
       .about-inner-left {
         width: 100%;
@@ -506,6 +505,12 @@
       flex-direction: column;
 
       gap: 3rem;
+
+      .contact-item {
+        h3 {
+          margin-top: 0;
+        }
+      }
 
       .contact-item,
       .contact-explore,

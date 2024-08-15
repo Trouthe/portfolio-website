@@ -8,6 +8,7 @@
   align-items: center;
   padding-inline: 1rem;
   background-color: var(--main-background);
+  transition: background-color 250ms;
 
   h2 {
     font-weight: lighter;
@@ -36,7 +37,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  width: 100svw;
+  width: 100vw;
   height: 100dvh;
   margin-left: -1rem;
 
@@ -65,7 +66,7 @@
 }
 
 .power-switch {
-  --color-invert: #ffffff;
+  --color-invert: var(--text-primary);
   --width: 48px;
   --height: 48px;
   // transform: scale(.4);
@@ -92,7 +93,7 @@
         var(--color-invert),
         transparent
       );
-      filter: blur(20px);
+      filter: blur(25px);
       opacity: 0;
       transition: opacity 1s ease, transform 1s ease;
       transform: perspective(1px) translateZ(0);
@@ -148,7 +149,7 @@
           transition: opacity 0.5s ease, transform 0.5s ease;
         }
         .power-on {
-          stroke: #121212;
+          stroke: var(--color-invert);
         }
         .power-on,
         .power-off {
