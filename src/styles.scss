@@ -1,5 +1,6 @@
 @import "./assets/styles/themes.scss";
 @import "./assets/styles/responsiveness.scss";
+@import "lenis/dist/lenis.css";
 
 @font-face {
   font-family: Fira Code;
@@ -16,10 +17,11 @@
   color: white;
 }
 
+
 html,
 body {
   background-color: var(--main-background);
-  transition: background-color 250ms;
+  transition: background-color 350ms;
   color: var(--text-primary);
   margin: 0;
   scroll-behavior: smooth !important;
