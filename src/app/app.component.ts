@@ -47,10 +47,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   linkedinIcon!: string;
   mailIcon!: string;
 
-  scrollSmooth: Lenis = new Lenis({
-    duration: 0.85,
-    syncTouch: true,
-  });
+  scrollSmooth!: Lenis;
 
   constructor(
     private theme: ThemeService,
@@ -70,22 +67,36 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     this.linkedinIcon = this.theme.getLinkedinIcon();
     this.mailIcon = this.theme.getMailIcon();
 
-    this.smoothScroll();
+    // Do not apply smooth scroll on mobile devices
+    if (!this.isMobile) {
+      this.scrollSmooth = new Lenis({
+        duration: 0.85,
+        syncTouch: true,
+      });
+
+      this.smoothScroll();
+    }
 
     gsap.registerPlugin(Observer);
+    const aboutItems = gsap.utils.toArray('.about-item') as HTMLElement[];
 
     gsap.fromTo(
       '.header-item',
       { y: 25, opacity: 0 },
       { y: 0, opacity: 1, ease: 'power4.out', stagger: 0.1, duration: 1.2 }
     );
+
     gsap.fromTo(
       '.about-item',
       { y: 25, opacity: 0 },
       { y: 0, opacity: 1, ease: 'power4.out', stagger: 0.15, duration: 1 }
     );
-
-    const aboutItems = gsap.utils.toArray('.about-item') as HTMLElement[];
+    
+    gsap.fromTo(
+      '.about-me',
+      { y: 50, opacity: 0 },
+      { y: 0, opacity: 1, ease: 'power4.out', duration: 1.75 }
+    );
 
     aboutItems.forEach((item: HTMLElement) => {
       Observer.create({

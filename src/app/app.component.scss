@@ -4,6 +4,13 @@
   max-width: 1920px;
 }
 
+.split-parent {
+  overflow: hidden;
+}
+.split-child {
+  display: inline-block;
+}
+
 .header {
   .header-item.item-a {
     grid-area: a;
