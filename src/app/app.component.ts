@@ -19,7 +19,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 // Smoothing and Animations
 import Lenis from 'lenis';
 import gsap from 'gsap';
-import { Observer } from 'gsap/all';
+import { Observer, ScrollTrigger } from 'gsap/all';
 
 @Component({
   selector: 'app-root',
@@ -49,6 +49,8 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   scrollSmooth!: Lenis;
 
+  themeDebug: boolean = false;
+
   constructor(
     private theme: ThemeService,
     private viewportScroller: ViewportScroller
@@ -77,7 +79,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       this.smoothScroll();
     }
 
-    gsap.registerPlugin(Observer);
+    gsap.registerPlugin(Observer, ScrollTrigger);
     const aboutItems = gsap.utils.toArray('.about-item') as HTMLElement[];
 
     gsap.fromTo(
@@ -91,7 +93,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       { y: 25, opacity: 0 },
       { y: 0, opacity: 1, ease: 'power4.out', stagger: 0.15, duration: 1 }
     );
-    
+
     gsap.fromTo(
       '.about-me',
       { y: 50, opacity: 0 },
@@ -118,6 +120,73 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         },
       });
     });
+
+    // ScrollTrigger Timelines
+    const educationTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#education',
+        start: 'top 100%',
+        end: 'top 50%`',
+        scrub: true,
+        markers: this.themeDebug,
+      },
+    });
+
+    const workTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#work',
+        start: 'top 100%',
+        end: 'top 50%`',
+        scrub: true,
+        markers: this.themeDebug,
+      },
+    });
+
+    const profSkillTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#skills',
+        start: 'top 87.5%',
+        end: 'top 50%',
+        markers: this.themeDebug,
+      },
+    });
+
+    const portfolioTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#portfolio',
+        start: 'top 87.5%',
+        end: 'top 50%',
+        markers: this.themeDebug,
+      },
+    });
+
+    educationTimeline
+      .fromTo('.education small', { opacity: 0, x: 50 }, { opacity: 1, x: 0 })
+      .fromTo('.education h1', { opacity: 0, x: -50 }, { opacity: 1, x: 0 }, 0)
+      .fromTo(
+        '.education-content',
+        { opacity: 0, scale: 0.95 },
+        { opacity: 1, scale: 1, stagger: 0.25 }
+      );
+
+    profSkillTimeline
+      .fromTo('.prof-title small', { opacity: 0, x: -50 }, { opacity: 1, x: 0 })
+      .fromTo('.prof-title h1', { opacity: 0, x: 50 }, { opacity: 1, x: 0 }, 0)
+      .fromTo(
+        '.prof-skill-card',
+        { opacity: 0, y: 25, scale: 0.9 },
+        { opacity: 1, y: 0, scale: 1, stagger: 0.3, ease: 'sine.out' },
+        0
+      );
+
+    workTimeline
+      .fromTo('.work-title small', { opacity: 0, x: 50 }, { opacity: 1, x: 0 })
+      .fromTo('.work-title h1', { opacity: 0, x: -50 }, { opacity: 1, x: 0 }, 0)
+      .fromTo(
+        '.work-content',
+        { opacity: 0, scale: 0.95 },
+        { opacity: 1, scale: 1, stagger: 0.25 }
+      );
   }
 
   ngOnDestroy(): void {
