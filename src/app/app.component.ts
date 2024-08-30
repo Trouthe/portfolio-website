@@ -157,7 +157,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         start: 'middle 85%',
         end: 'bottom 65%',
         scrub: true,
-        markers: true,
+        markers: this.themeDebug,
       },
     });
 
