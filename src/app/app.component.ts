@@ -126,7 +126,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       scrollTrigger: {
         trigger: '#education',
         start: 'top 100%',
-        end: 'top 50%`',
+        end: 'top 50%',
         scrub: true,
         markers: this.themeDebug,
       },
@@ -136,7 +136,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
       scrollTrigger: {
         trigger: '#work',
         start: 'top 100%',
-        end: 'top 50%`',
+        end: 'top 50%',
         scrub: true,
         markers: this.themeDebug,
       },
@@ -154,9 +154,10 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
     const portfolioTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: '#portfolio',
-        start: 'top 87.5%',
-        end: 'top 50%',
-        markers: this.themeDebug,
+        start: 'middle 85%',
+        end: 'bottom 65%',
+        scrub: true,
+        markers: true,
       },
     });
 
@@ -187,6 +188,19 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         { opacity: 0, scale: 0.95 },
         { opacity: 1, scale: 1, stagger: 0.25 }
       );
+
+    portfolioTimeline
+      .fromTo(
+        '.portfolio-container',
+        { opacity: 0, y: 50, scale: 0.95 },
+        { opacity: 1.5, y: 0, scale: 1, stagger: 0.4 }
+      )
+      .fromTo(
+        '.portfolio-title div span',
+        { opacity: 0 },
+        { opacity: 1, stagger: 0.075 },
+        0
+      );
   }
 
   ngOnDestroy(): void {
@@ -213,5 +227,10 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   onClickScroll(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
+  }
+
+  openResume(): void {
+    const fileURL = './assets/anthony-hajjar-resume.pdf';
+    window.open(fileURL);
   }
 }
