@@ -2,6 +2,7 @@
   {
     "image": "image-1.png",
     "title": "Taskify",
+    "link": "https://fullstackprojectspice.netlify.app/",
     "description": [
       "Taskify is a webapp I made as a little project, it helps manage projects and improve productivity. It is optimized for both, Web and Mobile with a very user-friendly and responsive design!",
       "For this project, I used MongoDB for the database, Node & Express for the back-end and Angular for the front-end.",
@@ -16,57 +17,81 @@
       "MongoDB",
       "Bcrypt",
       "SCSS"
-    ],
-    "link": "https://fullstackprojectspice.netlify.app/"
+    ]
   },
   {
     "image": "image-2.png",
     "title": "Fiber",
+    "link": "https://p01-fiber.netlify.app/",
     "description": [
       "Fiber is a mockup website made for a fitness application made with angular and mainly used TailwindCSS for the design",
       "For this project, there was a strict Figma file for the design, and I replicated it pixel perfectly, specially the phone load in animation! It consists of several <img /> tags with defined transform values with an onInit animation keyframes to give it that specialized load in look!"
     ],
-    "technology": ["Angular", "Figma", "TailwindCSS", "PostCSS", "SCSS"],
-    "link": "https://p01-fiber.netlify.app/"
+    "technology": ["Angular", "Figma", "TailwindCSS", "PostCSS", "SCSS"]
   },
   {
     "image": "image-3.png",
     "title": "Scales",
+    "link": "https://p04.netlify.app/",
     "description": [
       "Scales is a mockup website made for an e-commerce accelerator website made with angular and TailwindCSS for the most part of the design.",
       "For this project, there was a strict Figma file for the design, recreating it with the exact shadows and details was no challenge. For the members section, the user backgrounds were made with pure css giving full freedom for any design change, animations and giving the page that one extra performance boost!",
       "Small details have been added here and there, such as the customers continuous slider and the shadows for a footer!"
     ],
-    "technology": ["Angular", "Figma", "TailwindCSS", "PostCSS", "SCSS"],
-    "link": "https://p04.netlify.app/"
+    "technology": ["Angular", "Figma", "TailwindCSS", "PostCSS", "SCSS"]
   },
   {
     "image": "image-4.png",
     "title": "Phone Mockup",
+    "link": "https://p063d.netlify.app/",
     "description": [
       "This is a Phone mockup website where it showcases any device, in this case, a phone, and highlights the best parts of it.",
       "Working on this personal project was so challenging, I had to learn a new animation library (GSAP) and make it work with TypeScript, and setting up a canvas for the 3D model with spline runtime tool and implementing a loading animation for the duration of your browser loading the model for the best user experience.",
       "The model was made in spline, and I added a few changes in Blender before re-importing it to spline and adding keyframes to change colors, which are triggered through GSAP."
     ],
-    "technology": [
-      "Angular",
-      "GSAP",
-      "Spline",
-      "Splinetool",
-      "Blender",
-      "SCSS"
-    ],
-    "link": "https://p063d.netlify.app/"
+    "technology": ["Angular", "GSAP", "Spline", "Splinetool", "Blender", "SCSS"]
+  },
+  {
+    "image": "image-6.png",
+    "title": "Adagio",
+    "link": "https://music-adagio.netlify.app/",
+    "description": ["This website is a homepage for a platform that lets music teachers schedule and keep track of their schedule, customers and finances."],
+    "technology": ["Angular", "SCSS"]
   },
   {
     "image": "image-5.png",
     "title": "/ No Title /",
+    "link": "https://p-03.netlify.app/",
     "description": [
       "In this website, I tried copying a design of another website without any Figma file or preparation, pure intuition and adaptive approach.",
       "I enjoyed making the Hexagone designs with clip-path and implemented custom SVGs made from scratch with pure code and animated with @keyframes {} and pseudo-classes to target specific elements without the need to overload the website with classes.",
       "The navbar was special here, it was made to change to a white background if the user scrolled farther than 250 pixels and revert back when within that range."
     ],
-    "technology": ["Angular", "SVG", "CSS"],
-    "link": "https://p-03.netlify.app/"
+    "technology": ["Angular", "SVG", "CSS"]
+  },
+  {
+    "image": "image-7.png",
+    "title": "InkVerse",
+    "link": "https://music-adagio.netlify.app/",
+    "description": [
+      "InkVerse is a discontinued hand-crafted website for glass-art.",
+      "If the customer didn't find an artwork they're looking for through the available selection of art, they have the ability to submit for a custom artwork, describing every detail they desire, and will receive a quota through text.",
+      "Upon both parties agreeing on the terms, the artist will begin work on the artwork and ship it to the customer."
+    ],
+    "technology": ["Angular", "Figma", "TailwindCSS"]
+  },
+  {
+    "image": "image-8.png",
+    "title": "Best-Home Real Estate",
+    "link": "https://realestatewebsite01.framer.website",
+    "technology": ["Framer", "Figma", "Photoshop"],
+    "detailImages": [
+      "realestateanimations.jpg",
+      "realestate02.jpg",
+      "realestate01.png"
+    ],
+    "description": [
+      "This real estate themed website was designed in Figma, developed in Framer, and mockup designed in Photoshop."
+    ]
   }
 ]

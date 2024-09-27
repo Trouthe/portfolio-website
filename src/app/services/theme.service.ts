@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class ThemeService {
-  isLightTheme: boolean = false;
+  isLightTheme!: boolean;
   // hamburgerMenuSrc!: string;
   // arrowIconSrc!: string;
 
@@ -27,6 +27,13 @@ export class ThemeService {
 
     // this.hamburgerMenuSrc = this.getHamburgerMenuIcon();
     // this.arrowIconSrc = this.getArrowIcon();
+  }
+
+  getCurrentTheme(): void {
+    document.body.setAttribute(
+      'data-theme',
+      this.isLightTheme ? 'light' : 'dark'
+    );
   }
 
   switch(): void {

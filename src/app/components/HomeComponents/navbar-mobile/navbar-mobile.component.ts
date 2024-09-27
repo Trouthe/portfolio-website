@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ThemeService } from '../../services/theme.service';
-import { AppComponent } from '../../app.component';
+import { ThemeService } from '../../../services/theme.service';
 import { ViewportScroller } from '@angular/common';
+import { HomeComponent } from '../../home/home.component';
 
 @Component({
   selector: 'app-navbar-mobile',
   standalone: true,
-  imports: [AppComponent],
+  imports: [],
   templateUrl: './navbar-mobile.component.html',
   styleUrl: './navbar-mobile.component.scss',
 })
@@ -16,7 +16,7 @@ export class NavbarMobileComponent implements OnInit {
 
   constructor(
     private theme: ThemeService,
-    private appComponent: AppComponent,
+    private appComponent: HomeComponent,
     private viewportScroller: ViewportScroller
   ) {}
 

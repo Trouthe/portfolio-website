@@ -10,7 +10,7 @@ import { Portfolio } from './portfolio.interface';
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {
-  portfolioContent: Portfolio[] = portfolioContent;
+  portfolioContent: Portfolio[] = portfolioContent.slice(0, 4);
 
   goto(link: string): void {
     window.open(link, '_blank');

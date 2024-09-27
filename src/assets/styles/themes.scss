@@ -16,7 +16,8 @@
 
   --stroke-color: #121212;
   --content-border-radius: 35px;
-  --filter: invert(0%) sepia(18%) saturate(867%) hue-rotate(337deg) brightness(89%) contrast(86%);
+  --filter: invert(1);
+  --bracket: none;
 
   --hamburger-menu: "/assets/svg/burger-menu-black.svg";
   --arrow-icon: "/assets/svg/arrow-white.svg";
@@ -46,6 +47,7 @@
   --stroke-color: #505050;
   --content-border-radius: 35px;
   --filter: invert(1);
+  --bracket: invert(1);
 
   --hamburger-menu: "/assets/svg/burger-menu-white.svg";
   --arrow-icon: "/assets/svg/arrow-black.svg";

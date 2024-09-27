@@ -1,0 +1,203 @@
+<!-- <div class="main">
+  <p>Some testing over here</p>
+  <button (click)="onThemeSwitchChange()">Click me</button>
+</div> -->
+
+<!-- Navigation -->
+@if (!isMobile) {
+<app-navbar-desktop />
+} @else if (isMobile) {
+<app-navbar-mobile />
+<!-- Divider -->
+<div style="padding-bottom: 6rem"></div>
+}
+
+<!-- Header -->
+<section id="header" class="header">
+  <h1 class="header-item item-a">Fullstack</h1>
+  <div class="header-item item-b" (click)="openResume()">
+    <button class="header-button">Get Resume</button>
+    <button><img [src]="arrowIcon" alt="" /></button>
+  </div>
+
+  <p class="header-item item-c">
+    My goal is to create <span>seamless, user-friendly</span> applications by
+    integrating efficient back-end systems with <span>intuitive</span> front-end
+    designs.
+  </p>
+  <h1 class="header-item item-d">Developer</h1>
+</section>
+
+<!-- About Me -->
+<section id="about" class="about">
+  <!-- title -->
+  <small class="about-small">../About me</small>
+
+  <div class="about-inner">
+    <!-- Left -->
+    <div class="about-inner-left">
+      <div class="about-item front-end">
+        <h3>Front-End</h3>
+        <p>
+          Angular / Typescript / Node Packet Manager (NPM) / React / Apex Charts
+          / Svelte
+        </p>
+      </div>
+      <div class="about-item back-end">
+        <h3>Back-End</h3>
+        <p>
+          PHP / MySQL / NoSQL / MongoDB / Node / Express Socket.io / Bcrypt /
+          WebToken / Netlify
+        </p>
+      </div>
+      <div class="about-item styles">
+        <h3>Styles</h3>
+        <p>SCSS / CSS / TailwindCSS Figma / Photoshop</p>
+      </div>
+      <div class="about-item misc">
+        <h3>Misc</h3>
+        <p>Premiere Pro / Blender / Ableton</p>
+      </div>
+      <div class="about-item languages">
+        <h3>Languages</h3>
+        <div>
+          <h4>Arabic</h4>
+          <p>Native / Bilingual Proficiency</p>
+        </div>
+        <div>
+          <h4>English</h4>
+          <p>Full Professional Proficiency</p>
+        </div>
+        <div>
+          <h4>French</h4>
+          <p>Limited Working Proficiency</p>
+        </div>
+        <div>
+          <h4>Armenian</h4>
+          <p>Limited Working Proficiency</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <p class="about-me">
+      I’m Anthony, an aspiring Full Stack Developer with strong problem-solving
+      & communication skills, dedicated to learning and mastering a wide range
+      of technologies. I possess a deep interest in crafting intricate user
+      interfaces that offer both aesthetic appeal & seamless functionality, as
+      they play a pivotal role in enhancing customer retention, satisfaction,
+      and prolonged user engagement.
+    </p>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="education">
+  <!-- Title -->
+  <div class="education-title">
+    <small>../Education</small>
+    <h1>Education</h1>
+  </div>
+</section>
+<app-education />
+
+<!-- Professional Skills -->
+<section id="skills" class="prof-skills">
+  <div class="prof-title">
+    <small>../Professional-skills</small>
+    <h1>Professional Skills</h1>
+    <small>Swipe -> -></small>
+  </div>
+  <app-professional-skills />
+</section>
+
+<!-- Work Experience -->
+<section id="work" class="work">
+  <!-- Title -->
+  <div class="work-title">
+    <small>../Work-Experience</small>
+    <h1>Work</h1>
+  </div>
+</section>
+<app-work />
+
+<!-- Portfolio -->
+<section id="portfolio" class="portfolio">
+  <!-- Title -->
+  <div class="portfolio-title">
+    <small>../Projects</small>
+    <h1>Portfolio</h1>
+  </div>
+  <!-- Make Portfolio -->
+  <app-portfolio />
+  <!-- <div class="portfolio-footer" (click)="test()">
+        <button class="portfolio-button">Projects</button>
+        <button><img [src]="arrowIcon" alt="" /></button>
+      </div> -->
+  <button class="portfolio-button" (click)="openPortfolio()">See More</button>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+  <div class="contact-title">
+    <small>../Contact</small>
+    <h1>Let's get in touch!</h1>
+  </div>
+
+  <footer>
+    <div class="contact-item">
+      <h3>Website</h3>
+      <p>Designed and coded by Me /</p>
+      <p>Made with Angular /</p>
+    </div>
+
+    <div class="contact-explore">
+      <h3>Explore this website in depth!</h3>
+      <a
+        href="https://www.figma.com/design/f3VfxhyK12zJR9DvfZBgcw/Untitled?node-id=0-1&t=h8KeLoN4d9K58UT1-1"
+        target="_blank"
+      >
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="figmaIcon" alt="" />
+          <a>Figma File</a>
+        </div>
+      </a>
+      <a href="https://github.com/Trouthe/portfolio-website" target="_blank">
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="githubIcon" alt="" />
+          <a>GitHub Repo</a>
+        </div>
+      </a>
+    </div>
+
+    <div class="contact-item-contrast">
+      <h3>Contact Information</h3>
+      <a href="tel:+96170346194">Mobile number: +(961)70346194 /</a>
+      <a href="mailto:anthony.hajjar00@gmail.com"
+        >E-Mail: anthony.hajjar00&#64;gmail.com /</a
+      >
+      <a>Location: Beirut, Lebanon /</a>
+    </div>
+
+    <div class="contact-buttons">
+      <a href="https://github.com/Trouthe/" target="_blank">
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="githubIcon" alt="" />
+          <a>GitHub</a>
+        </div>
+      </a>
+      <a href="https://linkedin.com/in/anthony-hajjar/" target="_blank">
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="linkedinIcon" alt="" />
+          <a>LinkedIn</a>
+        </div>
+      </a>
+      <a href="mailto:anthony.hajjar00@gmail.com">
+        <div class="button-item">
+          <img width="25px" height="25px" [src]="mailIcon" alt="" />
+          <a>E-Mail</a>
+        </div>
+      </a>
+    </div>
+  </footer>
+</section>

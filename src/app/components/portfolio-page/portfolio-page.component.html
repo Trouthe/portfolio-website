@@ -1,0 +1,48 @@
+<div class="portfolio-main-container">
+  <div class="back-button" (click)="back()"><- BACK</div>
+  <div
+    *ngFor="let portfolio of portfolioContentFull; let i = index"
+    class="portfolio-item"
+  >
+    <img
+      [src]="'/assets/portfolio-images/' + portfolio.image"
+      alt="{{ portfolio.title }}"
+      (click)="openPortfolio(portfolio)"
+    />
+    <h3>{{ portfolio.title }}</h3>
+  </div>
+</div>
+
+<!-- Sliding panel -->
+<div class="sliding-panel" [ngClass]="{ open: isPanelOpen }">
+  <div class="panel-backdrop" (click)="closePanel()"></div>
+  <!-- <div class="panel-header" (click)="closePanel()">Close</div> -->
+  <div class="panel-content" *ngIf="selectedPortfolio">
+    <div class="panel-info">
+      <div class="panel-description">
+        <h1>{{ selectedPortfolio.title | titlecase }}</h1>
+        <h3>Description:</h3>
+        @for (info of selectedPortfolio.description; track $index) {
+          <p>{{ info }}</p>
+        }
+        <h3>Tech Stack:</h3>
+        <div class="techstack">
+          @for (tech of selectedPortfolio.technology; track $index) {
+            <span>{{ tech }}</span>
+          }
+        </div>
+        <!-- <p>Portfolio details go here...</p> -->
+      </div>
+      <div class="panel-images" [ngStyle]="{ 'column-count': selectedPortfolio.detailImages ? '2' : '1' }">
+        <img
+          [src]="'/assets/portfolio-images/' + selectedPortfolio.image"
+          alt="Portfolio image"
+        />
+
+        @for (image of selectedPortfolio.detailImages; track $index) {
+          <img [src]="'/assets/portfolio-images/detail-images/' + image" alt="" />
+        }
+      </div>
+    </div>
+  </div>
+</div>
