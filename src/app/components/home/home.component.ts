@@ -205,6 +205,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
+    this.scrollSmooth.destroy();
   }
 
   smoothScroll(): void {
@@ -235,6 +236,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   openPortfolio(): void {
-    this.router.navigate(['/portfolio'])
+    this.router.navigate(['/portfolio']);
   }
 }

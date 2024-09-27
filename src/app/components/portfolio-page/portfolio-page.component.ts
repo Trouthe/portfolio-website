@@ -4,13 +4,12 @@ import { Portfolio } from '../HomeComponents/portfolio/portfolio.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ThemeService } from '../../services/theme.service';
-import { NavbarDesktopComponent } from '../HomeComponents/navbar-desktop/navbar-desktop.component';
-import { NavbarMobileComponent } from '../HomeComponents/navbar-mobile/navbar-mobile.component';
+import { HomeComponent } from '../home/home.component';
 
 @Component({
   selector: 'app-portfolio-page',
   standalone: true,
-  imports: [CommonModule, NavbarDesktopComponent, NavbarMobileComponent],
+  imports: [CommonModule],
   templateUrl: './portfolio-page.component.html',
   styleUrls: ['./portfolio-page.component.scss'],
 })
@@ -22,7 +21,7 @@ export class PortfolioPageComponent {
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private theme: ThemeService
+    private theme: ThemeService,
   ) {}
 
   ngOnInit(): void {
@@ -58,6 +57,7 @@ export class PortfolioPageComponent {
     this.isPanelOpen = true;
 
     this.toggleScroll();
+    
     this.router.navigate([`/portfolio/${formattedTitle}`]);
   }
 
