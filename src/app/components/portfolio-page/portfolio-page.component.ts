@@ -15,17 +15,23 @@ import { HomeComponent } from '../home/home.component';
 })
 export class PortfolioPageComponent {
   portfolioContentFull: Portfolio[] = portfolioContent;
-  isPanelOpen: boolean = false;
   selectedPortfolio?: Portfolio | null = null; // Manage selected portfolio
+
+  closeButton!: string;
+  currentImage: string | null = null;
+
+  isPanelOpen: boolean = false;
+  isLightboxOpen: boolean = false;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-    private theme: ThemeService,
+    private theme: ThemeService
   ) {}
 
   ngOnInit(): void {
     this.theme.getCurrentTheme();
+    this.closeButton = this.theme.getCloseButton();
 
     // Listen for route changes to detect when to open the sliding panel
     this.route.paramMap.subscribe((params) => {
@@ -39,6 +45,8 @@ export class PortfolioPageComponent {
 
         // Open the panel if a portfolio is found
         this.isPanelOpen = !!this.selectedPortfolio;
+
+        this.toggleScroll();
       }
     });
   }
@@ -57,7 +65,7 @@ export class PortfolioPageComponent {
     this.isPanelOpen = true;
 
     this.toggleScroll();
-    
+
     this.router.navigate([`/portfolio/${formattedTitle}`]);
   }
 
@@ -72,6 +80,21 @@ export class PortfolioPageComponent {
   }
 
   back(): void {
-    this.router.navigate([`/`])
+    this.router.navigate([`/`]);
+  }
+
+  openLightbox(image: string) {
+    this.currentImage = image;
+    this.isLightboxOpen = true;
+    this.toggleScroll();
+  }
+
+  closeLightbox() {
+    setTimeout(() => {
+      this.currentImage = null;
+    }, 350);
+    
+    this.isLightboxOpen = false;
+    this.toggleScroll();
   }
 }

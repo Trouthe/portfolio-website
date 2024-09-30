@@ -20,28 +20,60 @@
   <div class="panel-content" *ngIf="selectedPortfolio">
     <div class="panel-info">
       <div class="panel-description">
-        <h1>{{ selectedPortfolio.title | titlecase }}</h1>
+        <div>
+          <h1>{{ selectedPortfolio.title | titlecase }}</h1>
+          <img
+            (click)="closePanel()"
+            width="27px"
+            [src]="closeButton"
+            alt="Close Button"
+          />
+        </div>
         <h3>Description:</h3>
+
         @for (info of selectedPortfolio.description; track $index) {
-          <p>{{ info }}</p>
+        <p>{{ info }}</p>
+
+        } @if (selectedPortfolio.link != "null" && selectedPortfolio.link != "" ) {
+        <a href="{{ selectedPortfolio.link }}" target="_blank">Visit Website</a>
         }
+
         <h3>Tech Stack:</h3>
         <div class="techstack">
           @for (tech of selectedPortfolio.technology; track $index) {
-            <span>{{ tech }}</span>
+          <span>{{ tech }}</span>
           }
         </div>
-        <!-- <p>Portfolio details go here...</p> -->
       </div>
-      <div class="panel-images" [ngStyle]="{ 'column-count': selectedPortfolio.detailImages ? '2' : '1' }">
+      <div
+        class="panel-images"
+        [ngStyle]="{
+          'column-count': selectedPortfolio.detailImages ? '2' : '1'
+        }"
+      >
         <img
+          (click)="openLightbox(selectedPortfolio.image)"
           [src]="'/assets/portfolio-images/' + selectedPortfolio.image"
           alt="Portfolio image"
         />
 
         @for (image of selectedPortfolio.detailImages; track $index) {
-          <img [src]="'/assets/portfolio-images/detail-images/' + image" alt="" />
+        <img
+          (click)="openLightbox('detail-images/' + image)"
+          [src]="'/assets/portfolio-images/detail-images/' + image"
+          alt="Portfolio Detail Image"
+        />
         }
+        <div
+          class="lightbox-target"
+          (click)="closeLightbox()"
+          [ngClass]="{ open: isLightboxOpen }"
+        >
+          <img
+            [src]="'/assets/portfolio-images/' + currentImage"
+            alt="Enlarged Portfolio Detail image"
+          />
+        </div>
       </div>
     </div>
   </div>

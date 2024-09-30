@@ -85,4 +85,10 @@ export class ThemeService {
       .getPropertyValue('--mail-icon')
       .replace(/['"]+/g, '');
   }
+
+  getCloseButton(): string {
+    return getComputedStyle(document.body)
+      .getPropertyValue('--close-button')
+      .replace(/['"]+/g, '');
+  }
 }

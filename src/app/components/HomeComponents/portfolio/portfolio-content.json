@@ -1,6 +1,6 @@
 [
   {
-    "image": "image-1.png",
+    "image": "image-1.webp",
     "title": "Taskify",
     "link": "https://fullstackprojectspice.netlify.app/",
     "description": [
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "image": "image-2.png",
+    "image": "image-2.webp",
     "title": "Fiber",
     "link": "https://p01-fiber.netlify.app/",
     "description": [
@@ -30,7 +30,7 @@
     "technology": ["Angular", "Figma", "TailwindCSS", "PostCSS", "SCSS"]
   },
   {
-    "image": "image-3.png",
+    "image": "image-3.webp",
     "title": "Scales",
     "link": "https://p04.netlify.app/",
     "description": [
@@ -41,7 +41,7 @@
     "technology": ["Angular", "Figma", "TailwindCSS", "PostCSS", "SCSS"]
   },
   {
-    "image": "image-4.png",
+    "image": "image-4.webp",
     "title": "Phone Mockup",
     "link": "https://p063d.netlify.app/",
     "description": [
@@ -52,14 +52,14 @@
     "technology": ["Angular", "GSAP", "Spline", "Splinetool", "Blender", "SCSS"]
   },
   {
-    "image": "image-6.png",
+    "image": "image-6.webp",
     "title": "Adagio",
     "link": "https://music-adagio.netlify.app/",
     "description": ["This website is a homepage for a platform that lets music teachers schedule and keep track of their schedule, customers and finances."],
     "technology": ["Angular", "SCSS"]
   },
   {
-    "image": "image-5.png",
+    "image": "image-5.webp",
     "title": "/ No Title /",
     "link": "https://p-03.netlify.app/",
     "description": [
@@ -70,9 +70,9 @@
     "technology": ["Angular", "SVG", "CSS"]
   },
   {
-    "image": "image-7.png",
+    "image": "image-7.webp",
     "title": "InkVerse",
-    "link": "https://music-adagio.netlify.app/",
+    "link": "null",
     "description": [
       "InkVerse is a discontinued hand-crafted website for glass-art.",
       "If the customer didn't find an artwork they're looking for through the available selection of art, they have the ability to submit for a custom artwork, describing every detail they desire, and will receive a quota through text.",
@@ -81,14 +81,14 @@
     "technology": ["Angular", "Figma", "TailwindCSS"]
   },
   {
-    "image": "image-8.png",
+    "image": "image-8.webp",
     "title": "Best-Home Real Estate",
     "link": "https://realestatewebsite01.framer.website",
     "technology": ["Framer", "Figma", "Photoshop"],
     "detailImages": [
-      "realestateanimations.jpg",
-      "realestate02.jpg",
-      "realestate01.png"
+      "realestateanimations.webp",
+      "realestate02.webp",
+      "realestate01.webp"
     ],
     "description": [
       "This real estate themed website was designed in Figma, developed in Framer, and mockup designed in Photoshop."

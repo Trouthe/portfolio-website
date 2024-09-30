@@ -13,6 +13,6 @@ export const routes: Routes = [
   },
   {
     path: 'portfolio/:portfolioTitle',
-    component: PortfolioPageComponent
-  }
+    component: PortfolioPageComponent,
+  },
 ];

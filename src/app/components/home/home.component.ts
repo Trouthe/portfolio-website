@@ -5,7 +5,7 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 
 import { ThemeService } from '../../services/theme.service';
@@ -26,6 +26,7 @@ import { Observer, ScrollTrigger } from 'gsap/all';
   standalone: true,
   imports: [
     RouterOutlet,
+    RouterLink,
     NavbarDesktopComponent,
     NavbarMobileComponent,
     EducationComponent,
@@ -61,15 +62,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   @HostListener('window:resize', ['$event'])
   ngOnInit(): void {
     this.checkWindow();
-  }
 
-  ngAfterViewInit() {
     this.arrowIcon = this.theme.getArrowIcon();
     this.figmaIcon = this.theme.getFigmaIcon();
     this.githubIcon = this.theme.getGithubIcon();
     this.linkedinIcon = this.theme.getLinkedinIcon();
     this.mailIcon = this.theme.getMailIcon();
+  }
 
+  ngAfterViewInit() {
     // Do not apply smooth scroll on mobile devices
     if (!this.isMobile) {
       this.scrollSmooth = new Lenis({
@@ -79,6 +80,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
       this.smoothScroll();
     }
+    
+    this.arrowIcon = this.theme.getArrowIcon();
 
     gsap.registerPlugin(Observer, ScrollTrigger);
     const aboutItems = gsap.utils.toArray('.about-item') as HTMLElement[];
@@ -205,7 +208,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.scrollSmooth.destroy();
+    // this.scrollSmooth.destroy();
   }
 
   smoothScroll(): void {
@@ -216,6 +219,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     const raf = (time: number) => {
       this.scrollSmooth.raf(time);
+
       requestAnimationFrame(raf);
     };
 
@@ -232,10 +236,13 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   openResume(): void {
     const fileURL = './assets/anthony-hajjar-resume.pdf';
+
     window.open(fileURL);
   }
 
   openPortfolio(): void {
+    if (!this.isMobile) this.scrollSmooth.destroy();
+
     this.router.navigate(['/portfolio']);
   }
 }
