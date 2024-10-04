@@ -38,7 +38,7 @@ export class PortfolioPageComponent {
       const portfolioTitle = params.get('portfolioTitle');
       if (portfolioTitle) {
         // Find the selected portfolio based on the title from the URL
-        this.selectedPortfolio = this.portfolioContentFull.find(
+         this.selectedPortfolio = this.portfolioContentFull.find(
           (p) =>
             p.title.replace(/[\s/]+/g, '-').toLowerCase() === portfolioTitle
         );

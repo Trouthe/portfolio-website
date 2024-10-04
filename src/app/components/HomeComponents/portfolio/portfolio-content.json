@@ -55,7 +55,9 @@
     "image": "image-6.webp",
     "title": "Adagio",
     "link": "https://music-adagio.netlify.app/",
-    "description": ["This website is a homepage for a platform that lets music teachers schedule and keep track of their schedule, customers and finances."],
+    "description": [
+      "This website is a homepage for a platform that lets music teachers schedule and keep track of their schedule, customers and finances."
+    ],
     "technology": ["Angular", "SCSS"]
   },
   {

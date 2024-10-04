@@ -62,15 +62,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   @HostListener('window:resize', ['$event'])
   ngOnInit(): void {
     this.checkWindow();
+  }
 
+  ngAfterViewInit() {
     this.arrowIcon = this.theme.getArrowIcon();
     this.figmaIcon = this.theme.getFigmaIcon();
     this.githubIcon = this.theme.getGithubIcon();
     this.linkedinIcon = this.theme.getLinkedinIcon();
     this.mailIcon = this.theme.getMailIcon();
-  }
 
-  ngAfterViewInit() {
     // Do not apply smooth scroll on mobile devices
     if (!this.isMobile) {
       this.scrollSmooth = new Lenis({
@@ -80,7 +80,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
       this.smoothScroll();
     }
-    
+
     this.arrowIcon = this.theme.getArrowIcon();
 
     gsap.registerPlugin(Observer, ScrollTrigger);
@@ -104,25 +104,39 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       { y: 0, opacity: 1, ease: 'power4.out', duration: 1.75 }
     );
 
+    const breathingTimeline = gsap.timeline({ repeat: -1, yoyo: true });
     aboutItems.forEach((item: HTMLElement) => {
-      Observer.create({
-        target: item, // Attach the observer to each item individually
-        type: 'pointer', // Handle pointer events
-        onHover: () => {
-          gsap.to(item, {
-            // Math.random() * (max - min): Scales the random number to be within the range of 0 to (max - min).
-            // + min: Shifts the scaled number to the desired range [min, max].
-            rotateZ: Math.random() * (-0.25 - 0.5) + 0.5,
-            duration: 0.25,
-          });
+      breathingTimeline.fromTo(
+        item,
+        { y: 0, rotate: 0 },
+        {
+          y: () => Math.random() * (-3.5 * 3.5) + 1,
+          rotate: () => Math.random() * (-1.25 * 1.25) + 0.5,
+          ease: 'elastic.inOut',
+          stagger: 1,
+          duration: 2,
+          overwrite: 'auto',
         },
-        onHoverEnd: () => {
-          gsap.to(item, {
-            rotateZ: 0,
-            duration: 0.25,
-          });
-        },
-      });
+        0
+      );
+      // Observer.create({
+      //target: item, // Attach the observer to each item individually
+      // type: 'pointer', // Handle pointer events
+      // onHover: () => {
+      //   gsap.to(item, {
+      //     // Math.random() * (max - min): Scales the random number to be within the range of 0 to (max - min).
+      //     // + min: Shifts the scaled number to the desired range [min, max].
+      //     rotateZ: Math.random() * (-0.25 - 0.5) + 0.5,
+      //     duration: 0.25,
+      //   });
+      // },
+      // onHoverEnd: () => {
+      //   gsap.to(item, {
+      //     rotateZ: 0,
+      //     duration: 0.25,
+      //   });
+      // },
+      // });
     });
 
     // ScrollTrigger Timelines
