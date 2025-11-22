@@ -2,6 +2,23 @@
   {
     "date": "2024",
     "duration": "Present",
+    "location": "ITXI - Hamra (Hybrid)",
+    "position": "Software Engineer",
+    "information": [
+      "Collaborated with cross-functional teams to design and implement new features, improving application performance and user satisfaction.",
+      "Engaged in code reviews and debugging sessions to maintain high code quality and resolve issues efficiently.",
+      "Gained experience in CI/CD pipelines, enhancing deployment processes and reducing downtime.",
+      "Integrated front-end components with backend services using RESTful APIs, enhancing overall system functionality.",
+      "Optimised applications for superior speed and scalability, ensuring optimal performance.",
+      "Integrated analytics tools to monitor user engagement and application performance, leading to data-driven improvements.",
+      "Gained proficiency in devops tools such as Git, Bitbucket, JIRA, Confluence, Firebase and Docker.",
+      "Worked on integrating a WASM module into a web application from scratch that scans and processes passports, enhancing user experience for visa applications.",
+      "Developed an Admin Dashboard using React, TypeScript and Chart.js, connected with Firebase and RESTful APIs (for analytics) efficiently enabling management of user data and system settings."
+    ]
+  },
+  {
+    "date": "2024",
+    "duration": "Present",
     "location": "Freelancing",
     "position": "Full-Stack Dev",
     "information": [

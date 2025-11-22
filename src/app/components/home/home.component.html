@@ -1,8 +1,3 @@
-<!-- <div class="main">
-  <p>Some testing over here</p>
-  <button (click)="onThemeSwitchChange()">Click me</button>
-</div> -->
-
 <!-- Navigation -->
 @if (!isMobile) {
 <app-navbar-desktop />
@@ -14,7 +9,7 @@
 
 <!-- Header -->
 <section id="header" class="header">
-  <h1 class="header-item item-a">Fullstack</h1>
+  <h1 class="header-item item-a">Software</h1>
   <div class="header-item item-b" (click)="openResume()">
     <button class="header-button">Get Resume</button>
     <button><img [src]="arrowIcon" alt="" /></button>
@@ -25,7 +20,7 @@
     integrating efficient back-end systems with <span>intuitive</span> front-end
     designs.
   </p>
-  <h1 class="header-item item-d">Developer</h1>
+  <h1 class="header-item item-d">Engineer</h1>
 </section>
 
 <!-- About Me -->
@@ -36,29 +31,34 @@
   <div class="about-inner">
     <!-- Left -->
     <div class="about-inner-left">
-      <div class="about-item front-end" style="--rotateBegin: 1deg; --rotateEnd: 0deg">
+      <div
+        class="about-item front-end"
+        style="--rotateBegin: 1deg; --rotateEnd: 0deg"
+      >
         <h3>Front-End</h3>
-        <p>
-          Angular / Typescript / Node Packet Manager (NPM) / React / Apex Charts
-          / Svelte
-        </p>
+        <p>Angular / React / Svelte / MUI / Chart.js</p>
       </div>
-      <div class="about-item back-end" style="--rotateBegin: 5deg; --rotateEnd: 0deg">
+      <div
+        class="about-item back-end"
+        style="--rotateBegin: 5deg; --rotateEnd: 0deg"
+      >
         <h3>Back-End</h3>
         <p>
-          PHP / MySQL / NoSQL / MongoDB / Node / Express Socket.io / Bcrypt /
-          WebToken / Netlify
+          Typescript / MySQL / NoSQL / MongoDB / Node / Express / Firebase /
+          RESTful
         </p>
       </div>
-      <div class="about-item styles" style="--rotateBegin: 3deg; --rotateEnd: 0deg">
-        <h3>Styles</h3>
-        <p>SCSS / CSS / TailwindCSS Figma / Photoshop</p>
+      <div
+        class="about-item styles"
+        style="--rotateBegin: 3deg; --rotateEnd: 0deg"
+      >
+        <h3>Devops Tools</h3>
+        <p>Git, Github, BitBucket, JIRA, Confluence, Docker</p>
       </div>
-      <div class="about-item misc" style="--rotateBegin: 2deg; --rotateEnd: 0deg">
-        <h3>Misc</h3>
-        <p>Premiere Pro / Blender / Ableton</p>
-      </div>
-      <div class="about-item languages" style="--rotateBegin: 1deg; --rotateEnd: 0deg">
+      <div
+        class="about-item languages"
+        style="--rotateBegin: 1deg; --rotateEnd: 0deg"
+      >
         <h3>Languages</h3>
         <div>
           <h4>Arabic</h4>
@@ -81,14 +81,34 @@
 
     <!-- Right -->
     <p class="about-me">
-      I’m Anthony, an aspiring Full Stack Developer with strong problem-solving
-      & communication skills, dedicated to learning and mastering a wide range
-      of technologies. I possess a deep interest in crafting intricate user
+      I’m Anthony, an aspiring Software Engineer with strong problem-solving &
+      communication skills, dedicated to learning and mastering a wide range of
+      technologies. I possess a deep interest in crafting intricate user
       interfaces that offer both aesthetic appeal & seamless functionality, as
       they play a pivotal role in enhancing customer retention, satisfaction,
       and prolonged user engagement.
     </p>
   </div>
+</section>
+
+<!-- Work Experience -->
+<section id="work" class="work">
+  <!-- Title -->
+  <div class="work-title">
+    <small>../Work-Experience</small>
+    <h1>Experience</h1>
+  </div>
+</section>
+<app-work />
+
+<!-- Professional Skills -->
+<section id="skills" class="prof-skills">
+  <div class="prof-title">
+    <small>../Professional-skills</small>
+    <h1>Professional Skills</h1>
+    <small>Swipe -> -></small>
+  </div>
+  <app-professional-skills />
 </section>
 
 <!-- Education -->
@@ -101,26 +121,6 @@
 </section>
 <app-education />
 
-<!-- Professional Skills -->
-<section id="skills" class="prof-skills">
-  <div class="prof-title">
-    <small>../Professional-skills</small>
-    <h1>Professional Skills</h1>
-    <small>Swipe -> -></small>
-  </div>
-  <app-professional-skills />
-</section>
-
-<!-- Work Experience -->
-<section id="work" class="work">
-  <!-- Title -->
-  <div class="work-title">
-    <small>../Work-Experience</small>
-    <h1>Work</h1>
-  </div>
-</section>
-<app-work />
-
 <!-- Portfolio -->
 <section id="portfolio" class="portfolio">
   <!-- Title -->
@@ -128,12 +128,7 @@
     <small>../Projects</small>
     <h1>Portfolio</h1>
   </div>
-  <!-- Make Portfolio -->
   <app-portfolio />
-  <!-- <div class="portfolio-footer" (click)="test()">
-        <button class="portfolio-button">Projects</button>
-        <button><img [src]="arrowIcon" alt="" /></button>
-      </div> -->
   <button class="portfolio-button" (click)="openPortfolio()">See More</button>
 </section>
 
@@ -172,11 +167,11 @@
 
     <div class="contact-item-contrast">
       <h3>Contact Information</h3>
-      <a href="tel:+96170346194">Mobile number: +(961)70346194 /</a>
+      <a href="tel:+96170346194">Mobile number: 70346194</a>
       <a href="mailto:anthony.hajjar00@gmail.com"
-        >E-Mail: anthony.hajjar00&#64;gmail.com /</a
+        >E-Mail: anthony.hajjar00&#64;gmail.com</a
       >
-      <a>Location: Beirut, Lebanon /</a>
+      <a>Location: Beirut, Mount Lebanon</a>
     </div>
 
     <div class="contact-buttons">
