@@ -5,15 +5,22 @@
     "location": "ITXI - Hamra (Hybrid)",
     "position": "Software Engineer",
     "information": [
-      "Collaborated with cross-functional teams to design and implement new features, improving application performance and user satisfaction.",
-      "Engaged in code reviews and debugging sessions to maintain high code quality and resolve issues efficiently.",
-      "Gained experience in CI/CD pipelines, enhancing deployment processes and reducing downtime.",
-      "Integrated front-end components with backend services using RESTful APIs, enhancing overall system functionality.",
-      "Optimised applications for superior speed and scalability, ensuring optimal performance.",
-      "Integrated analytics tools to monitor user engagement and application performance, leading to data-driven improvements.",
-      "Gained proficiency in devops tools such as Git, Bitbucket, JIRA, Confluence, Firebase and Docker.",
-      "Worked on integrating a WASM module into a web application from scratch that scans and processes passports, enhancing user experience for visa applications.",
-      "Developed an Admin Dashboard using React, TypeScript and Chart.js, connected with Firebase and RESTful APIs (for analytics) efficiently enabling management of user data and system settings."
+      "Designed and delivered a biometric identity verification corridor for an international aviation client, integrating facial recognition with a secure identity database",
+      "Built computer vision pipelines for document scanning and validation, streamlining digital travel authorization workflows",
+      "Implemented automated selfie verification using industry-standard frameworks, packaged as a reusable internal component",
+      "Architected CI/CD pipelines for pull request validation, end-to-end testing, and multi-environment deployments (Dev, QA, Prod)",
+      "Enabled a single codebase to support multi-region deployments with configurable localization and compliance layers",
+      "Led greenfield project development with a focus on scalability, resilience, and maintainability",
+      "Configured and built multi-variant application deployments for public sector and enterprise use cases",
+      "Implemented product analytics to monitor user flows, engagement, and drop-off points for data-driven optimization",
+      "Optimized web performance using parallel processing, low-level optimizations, and advanced compression techniques for smooth UX",
+      "Integrated cloud-based services for authentication, analytics, and real-time capabilities",
+      "Implemented predictable state management for handling complex application state",
+      "Standardized UI development using a component-based design system to ensure consistency and quality",
+      "Built reusable modular components published as internal packages for cross-project usage",
+      "Collaborated with backend teams to integrate high-performance APIs and payment processing systems",
+      "Developed data visualizations and delivered fully responsive, cross-device interfaces",
+      "Utilized industry-standard project management and collaboration tools to support agile delivery"
     ]
   },
   {
